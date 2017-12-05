@@ -6,6 +6,7 @@ Credit to John Gibson (WUSTL class of 2020) for assistance with and explantion f
      -application.py
      -soilsolutions.css
      -soilsolutions205.db
+     -requirements.txt
      
 w3schools website was used in creating the html files as well as the css file https://www.w3schools.com/html/ 
      
