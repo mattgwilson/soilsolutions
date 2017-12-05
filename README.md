@@ -1,7 +1,7 @@
 # soilsolutions
 Below are the pieces of code used in creating the soil solutions design project.
 
-Credit to John Gibson for assistance with and explantion for the following codes as well as the flask and sqlite websites http://flask.pocoo.org and http://www.sqlitetutorial.net/sqlite-python/sqlite-python-select/:
+Credit to John Gibson (WUSTL class of 2020) for assistance with and explantion for the following codes as well as the flask and sqlite websites http://flask.pocoo.org and http://www.sqlitetutorial.net/sqlite-python/sqlite-python-select/:
 
      -application.py
      -soilsolutions.css
