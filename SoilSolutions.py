@@ -75,6 +75,7 @@ while True:
             if(mcp.read_adc(i) >= 785):
                 refill = 'The water source is: 0% full. Refill necessary.'
                 print refill
+    # copy of input_data.py implemented into loop. -Matt's Code-
     r = requests.post('http://ese205soilsolutions-env.xba2aybskw.us-east-2.elasticbeanstalk.com/input',
                       data={'id': '1', 'moisture': moisture, 'water': refill})
     time.sleep(2)
