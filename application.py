@@ -5,12 +5,13 @@ import sqlite3
 
 application = Flask(__name__)
 
-
+#Code to send send the design of the homepage (splash.html)
 @application.route('/')
 def handle_splash():
     return render_template('splash.html')
 
-
+#Pushes the test database to the website when /test is added to the url
+#Contains the sqlite database of values ID, moisture, and water.
 @application.route('/test')
 def test():
     conn = sqlite3.connect('soilsolutions205.db')
@@ -21,7 +22,7 @@ def test():
     conn.close()
     return 'Test'
 
-
+#Handles the inputs of our data values and defines them so they can be posted when input_data.py is run
 @application.route('/input', methods=['POST'])
 def handle_input():
     if not request.form['moisture'] or not request.form['water'] or not request.form['id']:
@@ -35,7 +36,8 @@ def handle_input():
     conn.close()
     return 'Success', 200
 
-
+#returns the posted values on the website. 
+#/get?id="your id number" returns the data values of the specific pi's data.
 @application.route('/get', methods=['GET'])
 def handle_get():
     if not request.args['id']:
@@ -49,7 +51,8 @@ def handle_get():
         return render_template('dataview.html', id=data[0], moisture=data[1], water=data[2])
     return 'No data'
 
-
+#Method that creates a table for the data values to be viewed.
+#Called in test
 def create_table():
     try:
         conn = sqlite3.connect('soilsolutions205.db')
@@ -62,6 +65,6 @@ def create_table():
 
 """Help from John Gibson(Wustl class of 2020) was used in the writing of this code)"""
 
-
+#Runs the application.
 if __name__ == '__main__':
     application.run()
