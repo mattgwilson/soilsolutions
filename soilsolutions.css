@@ -1,3 +1,4 @@
+// code to format the table a particular way. called in dataview.html
 table, th, td {
     border: 1px solid black;
 	border-collapse: collapse;
