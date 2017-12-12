@@ -14,3 +14,6 @@ w3schools website was used in creating the html files as well as the css file ht
      -dataview.html
      -splash.html
      
+https://learn.adafruit.com/raspberry-pi-analog-to-digital-converters/mcp3008 This was used in the making of 
+
+     -SoilSolutions.py
